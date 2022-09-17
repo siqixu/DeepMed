@@ -34,7 +34,7 @@ DeepMed(y,d,m,x,method="DNN",hyper_grid=NA,epochs=500,batch_size=100,trim=0.05)
 `trim`: The trimming rate for preventing conditional treatment or mediator probabilities from being zero. Observations with any denominators in the potential outcomes smaller than the trimming rate will be excluded from the analysis. By default, `trim=0.05`.
 
 ## Value
-`results`: The estimates (`effect`), standard errors (`se`) and P values (`pval`) of the total treatment effect (`total`), (in)direct treatment effect in treated (`(in)dir.treat`), and (in)direct treatment effect in control group (`(in)indir.control`).
+`results`: The estimates (`effect`), standard errors (`se`) and P values (`pval`) of the total treatment effect (`total`), (in)direct treatment effect in treated (`(in)dir.treat`), and (in)direct treatment effect in control group (`(in)dir.control`).
  
 `ntrimmed`: The number of observations being excluded due to the denominators in the potential outcomes smaller than the trimming rate. 
 
