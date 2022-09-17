@@ -20,7 +20,7 @@ DeepMed(y,d,m,x,method="DNN",hyper_grid=NA,epochs=500,batch_size=100,trim=0.05)
 }
 
 \value{
-  \item{results}{The estimates (\emph{effect}), standard errors (\emph{se}) and P values (\emph{pval}) of the total treatment effect (\emph{total}), (in)direct treatment effect in treated (\emph{(in)dir.treat}), and (in)direct treatment effect in control group (\emph{(in)indir.control}).}
+  \item{results}{The estimates (\emph{effect}), standard errors (\emph{se}) and P values (\emph{pval}) of the total treatment effect (\emph{total}), (in)direct treatment effect in treated (\emph{(in)dir.treat}), and (in)direct treatment effect in control group (\emph{(in)dir.control}).}
   \item{ntrimmed}{The number of observations being excluded due to the denominators in the potential outcomes smaller than the trimming rate.}
 }
 
