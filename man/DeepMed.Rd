@@ -38,7 +38,7 @@ Xu S, Liu L and Liu Z. DeepMed: Semiparametric Causal Mediation Analysis with De
 \examples{
 library(DeepMed)
 # use parallel computation with 10 cores
-library(doParallel);cl=makeCluster(10);registerDoParallel(cl)
+library(doParallel);registerDoParallel(cores=10)
 
 # DNN
 l1 = c(0,0.05)   # the L1 regularizition parameter of the input layer
