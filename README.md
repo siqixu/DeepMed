@@ -3,13 +3,17 @@ DeepMed is an approach for semi-parametric causal mediation analysis to estimate
 
 
 ## Setup
-The "DeepMed" package requires R (>= 3.5.0), and depends on the R packages "keras", "tensorflow", "foreach", "gbm", "randomForest" and "hdm". Therefore, make sure that these packages have been installed before installing the "DeepMed" package.
+The "DeepMed" package requires R (>= 3.5.0), and depends on the R packages "keras", "tensorflow", "foreach", "gbm", "randomForest" and "hdm". 
 
 Use the following command in R to install the "DeepMed" package:
 ```
 library(devtools)
 install_github("siqixu/DeepMed",ref="main") # install the "DeepMed" package
+
+library(tensorflow)
+install_tensorflow()  # install the "tensorflow" python package
 ```
+
 
 ## Usage
 ```
