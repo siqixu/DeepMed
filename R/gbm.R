@@ -1,6 +1,7 @@
 #  gradient boosting machine
 
 gbm_out = function(y, x, ytest, xtest, hyper){
+  hyper = as.vector(hyper)
   dat = as.data.frame(cbind(y,x))
   datnew = as.data.frame(cbind(ytest,xtest))
   colnames(datnew)=colnames(dat)

@@ -1,9 +1,5 @@
 DeepMed_bin=function(y,d,m,x,method,hyper=hyper,trim=0.05){
 
-  y=as.vector(y);d=as.vector(d);m=as.vector(m)
-  if(is.null(nrow(x))){x=matrix(as.matrix(x),length(x),1)
-  }else{x=matrix(as.matrix(x),nrow(x),ncol(x))}
-
   if(method=="DNN"){ml=dnn}
   if(method=="GBM"){ml=gbm_out}
   if(method=="RF"){ml=rf_out}

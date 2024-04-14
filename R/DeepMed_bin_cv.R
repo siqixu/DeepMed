@@ -1,9 +1,5 @@
 DeepMed_bin_cv=function(y,d,m,x,method,hyper_grid,epochs,batch_size){
 
-  y=as.vector(y);d=as.vector(d);m=as.vector(m)
-  if(is.null(nrow(x))){x=matrix(as.matrix(x),length(x),1)
-  }else{x=matrix(as.matrix(x),nrow(x),ncol(x))}
-
   if(method=="DNN"){hyper_grid=cbind(hyper_grid,epochs,batch_size)}
   n_hyper=ncol(hyper_grid)
 

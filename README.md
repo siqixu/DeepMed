@@ -8,7 +8,7 @@ The "DeepMed" package requires R (>= 3.5.0), and depends on the R packages "kera
 Use the following command in R to install the "DeepMed" package:
 ```
 library(devtools)
-install_github("siqixu/DeepMed",ref="main") # install the "DeepMed" package
+install_github("sqx-afk/DeepMed",ref="main") # install the "DeepMed" package
 
 library(tensorflow)
 install_tensorflow()  # install the "tensorflow" python package
@@ -19,13 +19,13 @@ install_tensorflow()  # install the "tensorflow" python package
 ```
 DeepMed(y,d,m,x,method="DNN",hyper_grid=NA,epochs=500,batch_size=100,trim=0.05)
 ```
-`y`: A numeric vector for the outcome variable in causal mediation analysis.
+`y`: A numeric vector for the outcome variable.
 
-`d`: A numeric vector for the binary treatment variable in causal mediation analysis, which is coded as 0 or 1.
+`d`: A numeric vector for the binary treatment variable, which is coded as 0 or 1.
 
-`m`: A numeric vector for the mediator variable in causal mediation analysis.
+`m`: A numeric vector or a numeric matrix for the mediator variable. When the mediator is categorical, m should be a matrix with q columns for q dummy variables. 
 
-`x`: A numeric vector or a numeric matrix with p columns for p covariates in causal mediation analysis.
+`x`: A numeric vector or a numeric matrix with p columns for p covariates.
 
 `method`: The method used to estimate the nuisance functions with a 3-fold cross-fitting. Four methods are provided: deep neural network ("DNN""), gradient boosting machine ("GBM"), random forest ("RF") and Lasso ("Lasso"). See details below. By default, `method="DNN"`.
 

@@ -8,10 +8,10 @@ DeepMed(y,d,m,x,method="DNN",hyper_grid=NA,epochs=500,batch_size=100,trim=0.05)
 }
 
 \arguments{
-  \item{y}{A numeric vector for the outcome variable in causal mediation analysis.}
-  \item{d}{A numeric vector for the binary treatment variable in causal mediation analysis, which is coded as 0 or 1.}
-  \item{m}{A numeric vector for the mediator variable in causal mediation analysis.}
-  \item{x}{A numeric vector or a numeric matrix with p columns for p covariates in causal mediation analysis.}
+  \item{y}{A numeric vector for the outcome variable.}
+  \item{d}{A numeric vector for the binary treatment variable, which is coded as 0 or 1.}
+  \item{m}{A numeric vector or a numeric matrix for the mediator variable. When the mediator is categorical, m should be a matrix with q columns for q dummy variables.}
+  \item{x}{A numeric vector or a numeric matrix with p columns for p covariates.}
   \item{method}{The method used to estimate the nuisance functions with a 3-fold cross-fitting. Four methods are provided: deep neural network ("DNN""), gradient boosting machine ("GBM"), random forest ("RF") and Lasso ("Lasso"). See details below.  By default, \code{method="DNN"}.}
   \item{hyper_grid}{A numeric matrix containing a grid of candidate hyperparameters for "DNN", "GBM", or "RF" (see details below). A 3-fold cross-validation is used to select the hyperparameters over \code{hyper_grid} based on the cross-entropy loss for  binary response and the mean-squared loss for continuous response. If \code{method=="Lasso"}, this argument will be ignored.}
   \item{epochs}{The maximum number of candidate epochs in deep neural network. By default, \code{epochs=500}. If \code{method!="DNN"}, this argument will be ignored.}
