@@ -17,6 +17,7 @@ DeepMed=function(y,d,m,x,method="DNN",hyper_grid=NA,epochs=500,batch_size=100,tr
       warning("The outcome variable and the mediator variable do not have the same sample size")
       break
     }
+    if(ncol(m)==1){m=as.vector(m)}
   }else{
     warning("The mediator variable should be either a numeric vector or matrix")
     break
