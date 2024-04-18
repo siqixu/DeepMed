@@ -8,7 +8,7 @@ The "DeepMed" package requires R (>= 3.5.0), and depends on the R packages "kera
 Use the following command in R to install the "DeepMed" package:
 ```
 library(devtools)
-install_github("sqx-afk/DeepMed",ref="main") # install the "DeepMed" package
+install_github("siqixu/DeepMed",ref="main") # install the "DeepMed" package
 
 library(tensorflow)
 install_tensorflow()  # install the "tensorflow" python package
