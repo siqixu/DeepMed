@@ -7,11 +7,11 @@ The "DeepMed" package requires R (>= 3.5.0), and depends on the R packages "kera
 
 Use the following command in R to install the "DeepMed" package:
 ```
+library(tensorflow)
+install_tensorflow(version = "2.9.1", conda_python_version = ‘3.8’)  # install the "tensorflow" python package
+
 library(devtools)
 install_github("siqixu/DeepMed",ref="main") # install the "DeepMed" package
-
-library(tensorflow)
-install_tensorflow()  # install the "tensorflow" python package
 ```
 
 
